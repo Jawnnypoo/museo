@@ -16,7 +16,7 @@ function hello() {
 			return response.data.imageUri
 		})
 		.then(url => {
-			const path = app.getPath('desktop') + '/wallpaper.jpg'
+			const path = app.getPath('pictures') + '/museo.jpg'
 			const file = fs.createWriteStream(path);
 			http.get(url, function (response) {
 				response.pipe(file);
